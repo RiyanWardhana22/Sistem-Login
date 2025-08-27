@@ -47,7 +47,7 @@ Sistem ini memiliki beberapa alur utama yang saling berhubungan untuk memastikan
 
 ## Tech Stack (Teknologi yang Digunakan)
 
-- **Backend:** PHP 7.4+ (Native/Prosedural)
+- **Backend:** PHP 8.3+ (Native/Prosedural)
 - **Frontend:** HTML5, Bootstrap 5
 - **Database:** MySQL (dengan ekstensi MySQLi)
 - **Pengiriman Email:** PHPMailer
