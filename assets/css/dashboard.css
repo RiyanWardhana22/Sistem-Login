@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #7b68ee;
+  --secondary-color: #f8f9fa;
+  --text-color: #6c757d;
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --sidebar-bg: #2c3e50;
+  --sidebar-text: #ecf0f1;
+  --sidebar-active: #3498db;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* --- Sidebar --- */
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #34495e;
+  text-align: center;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  display: block;
+  color: var(--sidebar-text);
+  border-left: 3px solid transparent;
+}
+
+#sidebar ul li a:hover {
+  color: var(--sidebar-active);
+  background: #34495e;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: var(--sidebar-active);
+  border-left: 3px solid #ecf0f1;
+}
+
+/* --- Content Area --- */
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* --- Top Navbar --- */
+.top-navbar {
+  background-color: var(--card-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+/* --- Cards --- */
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--bg-color);
+  font-weight: 600;
+}
+
+/* --- Status Badges for Table --- */
+.badge {
+  padding: 0.5em 0.75em;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+.badge-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+.badge-warning {
+  background-color: #fff3cd;
+  color: #664d03;
+}
+.badge-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+.badge-info {
+  background-color: #cff4fc;
+  color: #055160;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
